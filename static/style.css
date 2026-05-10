@@ -424,3 +424,195 @@ footer p{
 
     color: #555;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media(max-width: 992px){
+
+    nav{
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul{
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        padding: 40px 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .hero-content h1{
+        font-size: 48px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
+    }
+
+    .about-company{
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .about-text h2{
+        font-size: 38px;
+    }
+
+    .services-section{
+        padding: 60px 20px;
+    }
+
+    .section-title h2{
+        font-size: 38px;
+    }
+
+    .project-details{
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .project-info h1{
+        font-size: 40px;
+    }
+
+    .dashboard{
+        padding: 30px 15px;
+    }
+
+    .category-page{
+        padding: 40px 20px;
+    }
+}
+
+
+/* PHONE VIEW */
+
+@media(max-width: 600px){
+
+    .logo h1{
+        font-size: 28px;
+    }
+
+    .logo p{
+        font-size: 10px;
+    }
+
+
+
+nav ul li a{
+    font-size: 14px;
+    padding: 6px 10px;
+}
+    }
+
+    .hero-content h1{
+        font-size: 36px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    .hero-content button{
+    width: 100%;
+    border-radius: 14px;
+    font-size: 18px;
+    }
+
+    .about-text h2{
+        font-size: 30px;
+    }
+
+    .about-text p{
+        font-size: 16px;
+    }
+
+    .section-title h2{
+        font-size: 30px;
+    }
+
+    .service-content h3{
+        font-size: 24px;
+    }
+
+    .project-info h1{
+        font-size: 32px;
+    }
+
+    .project-info p{
+        font-size: 16px;
+    }
+
+    .admin-login form,
+    .dashboard form{
+        width: 100%;
+    }
+
+    .project-grid{
+        grid-template-columns: 1fr;
+    }
+    .hero{
+    min-height: 70vh;
+    background-position: center;
+    }
+    .hero-content{
+    width: 100%;
+    padding: 0 15px;
+    }
+    .service-card{
+    margin-bottom: 25px;
+    }
+   /* HAMBURGER MENU */
+
+.menu-toggle{
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #ff6600;
+}
+
+
+/* MOBILE NAVBAR */
+
+@media(max-width: 768px){
+
+    nav{
+        position: relative;
+    }
+
+    .menu-toggle{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    nav ul{
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 220px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        z-index: 999;
+    }
+
+    nav ul.active{
+        display: flex;
+    }
+
+    nav ul li{
+        margin: 10px 0;
+    }
+}

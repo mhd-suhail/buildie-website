@@ -18,7 +18,11 @@
             <p>Designers & Developers</p>
         </div>
 
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+    ☰
+</div>
+
+<ul id="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
@@ -266,6 +270,13 @@
         </p>
 
     </footer>
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
 </body>
 </html>
