@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>{{ category }}</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        <h1>BuildCore</h1>
+        <p>Designers & Developers</p>
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+    </ul>
+
+</nav>
+
+<section class="category-page">
+
+    <h1>{{ category }}</h1>
+
+    <div class="project-grid">
+
+        {% for project in projects %}
+
+        <a href="/project/{{ project.id }}"
+        class="project-link">
+
+            <div class="project-card">
+
+                <img src="{{ url_for(
+                'static',
+                filename='uploads/' + project.image) }}">
+
+                <div class="project-content">
+
+                    <h2>{{ project.title }}</h2>
+
+                    <p>{{ project.description }}</p>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Update Project</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <h1>Update Project</h1>
+
+        <input
+        type="text"
+        name="title"
+        value="{{ project.title }}">
+
+        <textarea
+        name="description">{{ project.description }}</textarea>
+
+        <select name="category">
+
+            <option value="construction">
+                Construction
+            </option>
+
+            <option value="interior">
+                Interior
+            </option>
+
+            <option value="renovation">
+                Renovation
+            </option>
+
+            <option value="landscaping">
+                Landscaping
+            </option>
+
+            <option value="architectural-planning">
+                Architectural Planning
+            </option>
+
+        </select>
+
+        <input type="file" name="image">
+
+        <button type="submit">
+            Update Project
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
